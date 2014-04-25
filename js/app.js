@@ -1,10 +1,22 @@
-// The first step to creating an Ember.js application is 
+/*global Ember, DS, App:true */
+window.App = Ember.Application.create();
+
+App.ApplicationAdapter = DS.LSAdapter.extend({
+	namespace: 'todos-emberjs'
+});
+
+
+/*// The first step to creating an Ember.js application is 
 // to make an instance of Ember.Application and assign it to a global variable.
 // It's useful to have as a global variable since it will be used frequently
 window.App = Ember.Application.create();
 
 // For simplicity lets use a Fixture adapter for the DataStore
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+*/
+
+
 
 
 /*

@@ -1,4 +1,4 @@
-/*global Todos, Ember */
+/*global App, Ember */
 (function () {
 	'use strict';
 
