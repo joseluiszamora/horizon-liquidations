@@ -38,5 +38,4 @@ var Producto = Ember.Object.extend({
 	}.observes("name")
 
 });
-
 */
