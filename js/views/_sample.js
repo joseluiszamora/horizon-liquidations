@@ -1,1 +1,0 @@
-Written by {{author.firstName}} {{author.lastName}}

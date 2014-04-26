@@ -15,59 +15,73 @@
 
               <thead>
                 <tr>
+                  <th>&nbsp;</th>
                   <th>LINEA</th>
                   <th>VOL</th>
                   <th>PRODUCTO</th>
+                  <th>PRECIO (Bs.)</th>
                   <th>CARGA P</th>
                   <th>CARGA U</th>
+                  <th>TOTAL</th>
                 </tr>
               </thead>
               
-                {{#if length}}
-                  <tbody>
-                    {{#each filteredTodos itemController="todo"}}
-                      <tr>  
-                        <td>a</td>
-                        <td>a</td>
-                        <td>
-                          {{input type="checkbox" class="toggle" checked=isCompleted}}
+              {{#if length}}
+                <tbody>
+                  {{#each filteredTodos itemController="todo"}}
+                    <tr>
+                      <td>
+                        {{input type="checkbox" class="toggle" checked=isCompleted}}
+                      </td>
+                      <td> {{ line }} </td>
+                      <td> {{ volume }} </td>
+                      <td> {{ name }} </td>
+                      <td> {{ price }} </td>
+                      
+                      <td {{bind-attr class="isCompleted:completed isEditing:editing"}}>
+                        {{#if isEditing}}
+                          {{edit-todo class="edit" value=bufferedTitle focus-out="doneEditing" insert-newline="doneEditing" escape-press="cancelEditing"}}
+                        {{else}}
+                          <label {{action "editTodo" on="doubleClick"}}>{{ cargap }}</label>
+                        {{/if}}
                         </td>
-                        <td {{bind-attr class="isCompleted:completed isEditing:editing"}}>
-                          {{#if isEditing}}
-                            {{edit-todo class="edit" value=bufferedTitle focus-out="doneEditing" insert-newline="doneEditing" escape-press="cancelEditing"}}
-                          {{else}}
-                            <label {{action "editTodo" on="doubleClick"}}>{{title}}</label>
-                          {{/if}}
-                          </td>
-                        <td>a</td>
-                        <td><button {{action "removeTodo"}} class="destroy"></button></td>
-                      </tr>
-                    {{/each}}
-                  </tbody>
+                      <td> {{ cargau }} </td>
+                      <td> {{ totalvalue }} </td>
+                      <td><button {{action "removeTodo"}} class="destroy"></button></td>
+                    </tr>
+                  {{/each}}
+                </tbody>
 
 
-                  <footer id="footer">
-                    <span id="todo-count"><strong>{{remaining.length}}</strong> {{pluralize 'item' remaining.length}} left</span>
-                    <ul id="filters">
-                      <li>
-                        {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
-                      </li>
-                      <li>
-                        {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
-                      </li>
-                      <li>
-                        {{#link-to "todos.completed" activeClass="selected"}}Completed{{/link-to}}
-                      </li>
-                    </ul>
-                    {{#if completed.length}}
-                      <button id="clear-completed" {{action "clearCompleted"}}>
-                        Clear completed ({{completed.length}})
-                      </button>
-                    {{/if}}
-                  </footer>
-                {{/if}}
+                <footer id="footer">
+                  <span id="todo-count"><strong>{{remaining.length}}</strong> {{pluralize 'item' remaining.length}} left</span>
+                  <ul id="filters">
+                    <li>
+                      {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
+                    </li>
+                    <li>
+                      {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
+                    </li>
+                    <li>
+                      {{#link-to "todos.completed" activeClass="selected"}}Completed{{/link-to}}
+                    </li>
+                  </ul>
+                  {{#if completed.length}}
+                    <button id="clear-completed" {{action "clearCompleted"}}>
+                      Clear completed ({{completed.length}})
+                    </button>
+                  {{/if}}
+                </footer>
+              {{/if}}
 
-              
+              <tfooter>
+                <tr>
+                  <th colspan=5>&nbsp;</th>
+                  <th>100</th>
+                  <th>200</th>
+                  <th>300</th>
+                </tr>
+              </tfooter>
             </table>
 
           </div>

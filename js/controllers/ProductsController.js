@@ -1,6 +1,7 @@
 /*global App, Ember */
 (function () {
   'use strict';
+
   App.ProductsController = Ember.ArrayController.extend({
     actions: {
       createTodo: function () {
@@ -13,7 +14,7 @@
         }
 
         // Create the new Todo model
-        todo = this.store.createRecord('todo', {
+        todo = this.store.createRecord('product', {
           title: title,
           isCompleted: false
         });
@@ -31,7 +32,6 @@
     },
 
     /* properties */
-
     remaining: Ember.computed.filterBy('content', 'isCompleted', false),
     completed: Ember.computed.filterBy('content', 'isCompleted', true),
 
