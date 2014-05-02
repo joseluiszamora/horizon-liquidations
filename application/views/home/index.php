@@ -1,6 +1,6 @@
 <script type="text/x-handlebars" data-template-name="todos">
   {{partial "title"}}
-  
+
   <div class="row">
 
     <div class="col-lg-8">
@@ -25,7 +25,7 @@
                   <th>TOTAL</th>
                 </tr>
               </thead>
-              
+
               {{#if length}}
                 <tbody>
                   {{#each filteredTodos itemController="todo"}}
@@ -37,7 +37,7 @@
                       <td> {{ volume }} </td>
                       <td> {{ name }} </td>
                       <td> {{ price }} </td>
-                      
+
                       <td {{bind-attr class="isCompleted:completed isEditing:editing"}}>
                         {{#if isEditing}}
                           {{edit-todo class="edit" value=bufferedTitle focus-out="doneEditing" insert-newline="doneEditing" escape-press="cancelEditing"}}
@@ -90,7 +90,7 @@
     </div>
 
 
-    {{partial "right_side"}}  
+    {{partial "right_side"}}
   </div>
 </script>
 
@@ -126,4 +126,27 @@
       </div>
     </div>
   </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="lines">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>LINEA</th>
+      <th>VOL</th>
+      <th>PRODUCTO</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each line in model}}
+      {{#each line_volume in line.line_volumes}}
+      <tr>
+        <td>{{line.description}}</td>
+        <td>{{line_volume.volume.description}}</td>
+        <td>{{line_volume.product.name}}</td>
+      </tr>
+      {{/each}}
+    {{/each}}
+  </tbody>
+</table>
 </script>

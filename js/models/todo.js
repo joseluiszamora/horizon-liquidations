@@ -13,4 +13,6 @@
 		cargap: DS.attr('number'),
 		cargau: DS.attr('number')
 	});
+
+  App.Todo.FIXTURES = [];
 })();

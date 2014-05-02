@@ -6,6 +6,8 @@
       this.route('active');
       this.route('completed');
     });
+
+    this.resource('lines');
   });
 
   App.TodosRoute = Ember.Route.extend({
@@ -37,6 +39,12 @@
       });
 
       this.controllerFor('todos').set('filteredTodos', todos);
+    }
+  });
+
+  App.LinesRoute = Ember.Route.extend({
+    model: function() {
+      return this.store.find('line');
     }
   });
 })();

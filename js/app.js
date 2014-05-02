@@ -1,12 +1,13 @@
 /*global Ember, DS, App:true */
 window.App = Ember.Application.create();
 
-App.ApplicationAdapter = DS.LSAdapter.extend({
-	namespace: 'todos-emberjs'
-});
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
+//App.ApplicationAdapter = DS.LSAdapter.extend({
+//	namespace: 'todos-emberjs'
+//});
 
-/*// The first step to creating an Ember.js application is 
+/*// The first step to creating an Ember.js application is
 // to make an instance of Ember.Application and assign it to a global variable.
 // It's useful to have as a global variable since it will be used frequently
 window.App = Ember.Application.create();
@@ -20,7 +21,7 @@ App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 
 /*
-var Producto = Ember.Object.extend({ 
+var Producto = Ember.Object.extend({
     line: "line default",
     volume: "volume default",
     name: "name default"
@@ -34,7 +35,7 @@ var Producto = Ember.Object.extend({
     ,link: function() {
 	  return this.convertir_en_link();
 	}.property("name", "line")
-	
+
 	,detalle: function() {
   		return 'Link: ' + this.get('line') + '; Nombre: ' + this.get('name') + '; Url: ' + this.get('volume');
 	}.property('line', 'name', 'volume')
