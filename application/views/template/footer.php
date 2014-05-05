@@ -28,10 +28,13 @@
 <script src="../../js/models/line.js"></script>
 <script src="../../js/models/volume.js"></script>
 <script src="../../js/models/product.js"></script>
+<script src="../../js/models/charge.js"></script>
 <script src="../../js/controllers/todos_controller.js"></script>
 <script src="../../js/controllers/todo_controller.js"></script>
+<script src="../../js/controllers/charge_controller.js"></script>
 <script src="../../js/views/edit_todo_view.js"></script>
 <script src="../../js/views/todos_view.js"></script>
+<script src="../../js/views/number_field_view.js"></script>
 <script src="../../js/helpers/helpers.js"></script>
 
 <!-- Page-Level Plugin Scripts - Dashboard

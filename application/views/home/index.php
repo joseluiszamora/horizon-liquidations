@@ -180,3 +180,35 @@
   </tbody>
 </table>
 </script>
+<script type="text/x-handlebars" data-template-name="charges">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th rowspan="2">LINEA</th>
+      <th rowspan="2">VOL</th>
+      <th rowspan="2">PRODUCTO</th>
+      <th colspan="2">DIA ANT.</th>
+      <th colspan="2">CARGA</th>
+    </tr>
+    <tr>
+      <th>P</th>
+      <th>U</th>
+      <th>P</th>
+      <th>U</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each charge in model itemController="charge"}}
+      <tr>
+        <td>{{charge.linea}}</td>
+        <td>{{charge.vol}}</td>
+        <td>{{charge.producto}}</td>
+        <th>{{charge.cargap}}</th>
+        <th>{{charge.cargau}}</th>
+        <th>{{input-number type="text" value=p focus-out="saveValue"}}</th>
+        <th>{{input-number type="text" value=u focus-out="saveValue"}}</th>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</script>

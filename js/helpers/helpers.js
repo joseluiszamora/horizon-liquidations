@@ -2,6 +2,8 @@
 (function () {
 	'use strict';
 
+  Ember.Handlebars.helper('input-number', App.NumberFieldView);
+
 	Ember.Handlebars.helper('getLineDescription', function (v_id, p_id) {
     this.store('line');
     //var hola = App.LinesRoute.model;
