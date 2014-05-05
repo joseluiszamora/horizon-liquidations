@@ -150,3 +150,33 @@
   </tbody>
 </table>
 </script>
+
+<script type="text/x-handlebars" data-template-name="volumes">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>LINEA</th>
+      <th>VOL</th>
+      <th>PRODUCTO</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each volume in model}}
+      {{#if volume.products}}
+      {{#each product in volume.products}}
+      <tr>
+        <td>{{getLineDescription volume.id product.id}}</td>
+        <td>{{volume.description}}</td>
+        <td>{{product.name}}</td>
+      </tr>
+      {{/each}}
+      <tr>
+        <th></th>
+        <th>0</th>
+        <th>0</th>
+      </tr>
+      {{/if}}
+    {{/each}}
+  </tbody>
+</table>
+</script>

@@ -8,7 +8,8 @@
       name: DS.attr('string'),
       cargap: DS.attr('number'),
       cargau: DS.attr('number'),
-      line_volumes: DS.hasMany('line_volume', { async: true })
+      line_volumes: DS.hasMany('line_volume', { async: true }),
+      volumes: DS.hasMany('volume', { async: true })
    });
 
    // Seed data to be displayed
@@ -19,5 +20,4 @@
      { id: 4, name: 'BLUEBERRY', cargap: 21.5, cargau: 23 },
      { id: 5, name: 'BERRY', cargap: 21.5, cargau: 23 }
    ]
-
 })();

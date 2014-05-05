@@ -32,7 +32,7 @@
 <script src="../../js/controllers/todo_controller.js"></script>
 <script src="../../js/views/edit_todo_view.js"></script>
 <script src="../../js/views/todos_view.js"></script>
-<script src="../../js/helpers/pluralize.js"></script>
+<script src="../../js/helpers/helpers.js"></script>
 
 <!-- Page-Level Plugin Scripts - Dashboard
 <script src="../js/plugins/morris/raphael-2.1.0.min.js"></script>

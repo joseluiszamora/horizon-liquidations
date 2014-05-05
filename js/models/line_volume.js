@@ -2,8 +2,8 @@
 
 App.LineVolume = DS.Model.extend({
   line: DS.belongsTo('line'),
-  volume: DS.belongsTo('volume'),
-  product: DS.belongsTo('product')
+  volume: DS.belongsTo('volume', { async: true }),
+  product: DS.belongsTo('product', { async: true })
 });
 
 App.LineVolume.FIXTURES = [

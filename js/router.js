@@ -8,6 +8,7 @@
     });
 
     this.resource('lines');
+    this.resource('volumes');
   });
 
   App.TodosRoute = Ember.Route.extend({
@@ -45,6 +46,16 @@
   App.LinesRoute = Ember.Route.extend({
     model: function() {
       return this.store.find('line');
+    }
+  });
+  App.VolumesRoute = Ember.Route.extend({
+    model: function() {
+      return this.store.find('volume');
+    }
+  });
+  App.LineVolumesRoute = Ember.Route.extend({
+    model: function() {
+      return this.store.find('line_volume');
     }
   });
 })();
