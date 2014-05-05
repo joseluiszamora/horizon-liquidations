@@ -5,7 +5,7 @@
   Ember.Handlebars.helper('input-number', App.NumberFieldView);
 
 	Ember.Handlebars.helper('getLineDescription', function (v_id, p_id) {
-    this.store('line');
+    //this.store('line');
     //var hola = App.LinesRoute.model;
     //var line_volumes = App.LineVolume.store.find('line_volume');
     //line_volumes = App.LineVolume.store.all('line_volume');
