@@ -8,33 +8,30 @@
     <title>Horizon Liquidaciones</title>
 
     <!-- Core CSS - Include with every page -->
-    <link href="../../css/normalize.css" rel="stylesheet">
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../../css/sb-admin.css" rel="stylesheet">
-
-    <!-- Page-Level Plugin CSS - Dashboard
-    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-    <link href="../css/plugins/timeline/timeline.css" rel="stylesheet">
-    -->
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 </head>
 <body>
 
-<script type="text/x-handlebars" data-template-name='_navbar_header'>
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="index.html">Horizon Liquidaciones</a>
-  </div>
-  <!-- /.navbar-header -->
-</script>
 
-<script type="text/x-handlebars" data-template-name='_navbar_toplinks'>
-  <ul class="nav navbar-top-links navbar-right">
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Horizon Liquidaciones</a>
+    </div>
+    <!-- /.navbar-header -->
+
+
+
+    <ul class="nav navbar-top-links navbar-right">
       <!--<li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -238,12 +235,11 @@
           <!-- /.dropdown-user -->
       </li>
       <!-- /.dropdown -->
-  </ul>
-  <!-- /.navbar-top-links -->
-</script>
+    </ul>
+    <!-- /.navbar-top-links -->
 
-<script type="text/x-handlebars" data-template-name='_navbar_left_menu'>
-  <div class="navbar-default navbar-static-side" role="navigation">
+
+    <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
@@ -329,26 +325,8 @@
                     <!-- /#side-menu -->
                 </div>
                 <!-- /.sidebar-collapse -->
-  </div>
-  <!-- /.navbar-static-side -->
-</script>
-
-<script type="text/x-handlebars" data-template-name="application">
-  <div id="wrapper">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-        {{partial "navbar_header"}}
-
-        {{partial "navbar_toplinks"}}
-
-        {{partial "navbar_left_menu"}}
-    </nav>
-
-    <div id="page-wrapper">
-      {{outlet}}
     </div>
+    <!-- /.navbar-static-side -->
+  </nav>
 
-  </div>
-</script>
-
-</body>
-</html>
+  <div id="page-wrapper">
