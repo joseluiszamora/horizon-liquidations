@@ -11,7 +11,7 @@
 
         <div class="panel-body">
           <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+            <table id="products-list" class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>LINEA</th>
@@ -23,26 +23,16 @@
                   <th>TOTAL</th>
                 </tr>
               </thead>
-                <tbody>
-                    <tr>
-                      <td>mix</td>
-                      <td>3l</td>
-                      <td>CAIPIRINHA</td>
-                      <td>23.5</td>
-                      <td>2</td>
-                      <td>8</td>
-                      <td>8</td>
-                    </tr>
-                </tbody>
+              <tbody></tbody>
 
-              <tfooter>
+              <tfoot>
                 <tr>
                   <th colspan=4>&nbsp;</th>
                   <th>100</th>
                   <th>200</th>
                   <th>300</th>
                 </tr>
-              </tfooter>
+              </tfoot>
             </table>
 
           </div>
@@ -75,3 +65,17 @@
   </div>
 
 </div>
+
+<script id="product-tpl" type="text/html">
+  {{#products}}
+  <tr id="product_{{id}}">
+    <td>{{linea}}</td>
+    <td>{{vol}}</td>
+    <td>{{producto}}</td>
+    <td>{{precio}}</td>
+    <td>{{da_p}}</td>
+    <td>{{da_u}}</td>
+    <td>8</td>
+  </tr>
+  {{/products}}
+</script>
